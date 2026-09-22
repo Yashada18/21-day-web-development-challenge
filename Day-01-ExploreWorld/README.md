@@ -4,6 +4,17 @@ ExploreWorld is a responsive tourism and trip-planning website built as part of 
 
 The project focuses on building a clean travel landing page using only HTML and CSS while practicing semantic HTML, Flexbox, CSS Grid, responsive design, hover effects, forms, and Git/GitHub.
 
+## 📸 Preview
+
+### Home Page
+
+![ExploreWorld Desktop](./screenshots/home.png)
+
+### Destinations
+
+![ExploreWorld Mobile](./screenshots/destinations.png)
+
+
 ## ✨ Features
 
 - Responsive navigation bar
