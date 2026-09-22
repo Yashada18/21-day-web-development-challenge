@@ -8,11 +8,11 @@ The project focuses on building a clean travel landing page using only HTML and 
 
 ### Home Page
 
-![ExploreWorld Desktop](./screenshots/home.png)
+![ExploreWorld](./screenshots/home.png)
 
 ### Destinations
 
-![ExploreWorld Mobile](./screenshots/destinations.png)
+![ExploreWorld](./screenshots/destinations.png)
 
 
 ## ✨ Features
