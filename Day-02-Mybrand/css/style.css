@@ -1,0 +1,1199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f1e8;
+    color: #171717;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    padding: 24px 6%;
+    border-bottom: 1px solid #d8d2c5;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+nav ul a {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav > a {
+    padding: 10px 18px;
+    border: 1px solid #171717;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero {
+    min-height: 85vh;
+    padding: 80px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    right: 5%;
+    width: 180px;
+    height: 140px;
+
+    background-image:
+        linear-gradient(#d9d3c7 1px, transparent 1px),
+        linear-gradient(90deg, #d9d3c7 1px, transparent 1px);
+
+    background-size: 20px 20px;
+
+    opacity: 0.5;
+    transform: rotate(4deg);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(52px, 7vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.hero h2 span {
+    display: inline-block;
+    background: #f5b6c8;
+    padding: 0 12px;
+    transform: rotate(-2deg);
+}
+
+.hero-description {
+    max-width: 500px;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.hero-buttons a {
+    padding: 13px 22px;
+    border: 1px solid #171717;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.hero-buttons a:first-child {
+    background: #171717;
+    color: white;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    position: relative;
+    width: 500px;
+    min-width: 500px;
+    height: 560px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gingham {
+    position: absolute;
+
+    width: 300px;
+    height: 390px;
+
+    object-fit: cover;
+    object-position: top left;
+
+    top: 55px;
+    left: 45px;
+
+    transform: rotate(-7deg);
+
+    z-index: 1;
+}
+
+.sun {
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    object-fit: contain;
+
+    top:0;
+    right: 1px;
+
+    transform: rotate(8deg);
+
+    z-index: 3;
+}
+
+.flower {
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    object-fit: contain;
+
+    bottom: 35px;
+    left: 15px;
+
+    transform: rotate(-12deg);
+
+    z-index: 4;
+}
+
+.hero-content,
+.hero-image {
+    position: relative;
+    z-index: 3;
+}
+
+.polaroid {
+    position: relative;
+
+    width: 330px;
+
+    padding: 15px 15px 25px;
+
+    background: white;
+
+    box-shadow: 8px 10px 0 rgba(0, 0, 0, 0.12);
+
+    transform: rotate(3deg);
+
+    z-index: 3;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 390px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.polaroid p {
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-family: cursive;
+
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.polaroid::before {
+    content: "";
+
+    position: absolute;
+
+    top: -18px;
+    left: 50%;
+
+    width: 95px;
+    height: 30px;
+
+    background: #f3d58a;
+
+    transform: translateX(-50%) rotate(-4deg);
+
+    opacity: 0.9;
+
+    z-index: 5;
+}
+
+.scrap {
+    position: absolute;
+    z-index: 0;
+}
+
+.scrap-pink {
+    top: 20px;
+    left: -25px;
+    width: 180px;
+    height: 90px;
+    background: #f3a8bd;
+
+    background-image:
+        linear-gradient(#d98da5 1px, transparent 1px),
+        linear-gradient(90deg, #d98da5 1px, transparent 1px);
+
+    background-size: 18px 18px;
+
+    transform: rotate(-2deg);
+    opacity: 0.7;
+}
+
+.doodle {
+    position: absolute;
+    z-index: 2;
+    font-family: cursive;
+}
+
+.doodle-star {
+    left: 5px;
+    top: 120px;
+    font-size: 60px;
+    transform: rotate(-15deg);
+}
+
+.doodle-heart {
+    right: 13%;
+    top: 280px;
+    font-size: 55px;
+    color: #e98ca8;
+    transform: rotate(10deg);
+}
+
+.hand-note {
+    position: absolute;
+    right: 31%;
+    bottom: 130px;
+    z-index: 2;
+
+    font-family: cursive;
+    font-size: 18px;
+    line-height: 1.5;
+
+    transform: rotate(-8deg);
+}
+
+.doodle-spark {
+    left: 42%;
+    top: 100px;
+    font-size: 45px;
+    color: #e98ca8;
+    transform: rotate(15deg);
+}
+
+.work {
+    padding: 120px 6%;
+    background: #fffdf8;
+}
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-heading > p {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px 40px;
+}
+
+.project-card {
+    position: relative;
+    background: #f2eee4;
+    padding: 15px;
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease;
+}
+
+.project-card:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+.project-card:hover {
+    transform: translateY(-8px) rotate(0deg);
+}
+
+.project-card > img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 25px 10px 15px;
+}
+
+.project-info > p:first-child {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.project-info h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.project-info a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+    top: -14px;
+    left: 50%;
+
+    width: 90px;
+    height: 28px;
+
+    background: #f3d58a;
+
+    transform: translateX(-50%) rotate(-3deg);
+
+    opacity: 0.9;
+
+    z-index: 5;
+}
+
+.project-card:nth-child(1)::before {
+    background: #f3d58a;
+    transform: translateX(-50%) rotate(-4deg);
+}
+
+.project-card:nth-child(2)::before {
+    background: #f3a8bd;
+    transform: translateX(-50%) rotate(5deg);
+}
+
+.project-card:nth-child(3)::before {
+    background: #a9d8e8;
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+.project-card:nth-child(4)::before {
+    background: #c8b6e8;
+    transform: translateX(-50%) rotate(4deg);
+}
+
+.about {
+     padding: 100px 6%;
+    background: #f5f1e8;
+}
+
+.about-heading {
+    margin-bottom: 60px;
+}
+
+.about-heading > p {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-heading h2 {
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
+
+.about-content {
+    position: relative;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-text {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+
+    background: #fffdf8;
+    padding: 40px;
+
+    transform: rotate(-1.5deg);
+    box-shadow: 8px 8px 0 #ded7ca;
+}
+
+.about-cats {
+    position: absolute;
+
+    width: 200px;
+    height: auto;
+
+    top: -150px;
+    left: -100px;
+
+    transform: rotate(-5deg);
+
+    z-index: 10;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-text a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.skills {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+
+    background: #f3a8bd;
+    padding: 35px;
+
+    transform: rotate(2deg);
+    box-shadow: 8px 8px 0 #171717;
+}
+
+.skills-bow {
+    position: absolute;
+
+    width: 200px;
+    height: auto;
+
+    top: -80px;
+    right: -80px;
+
+    transform: rotate(30deg);
+
+    z-index: 3;
+}
+
+.skills > p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-list span {
+    padding: 10px 16px;
+    background: #fffdf8;
+    border: 1px solid #171717;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.contact {
+    position: relative;
+    min-height: 750px;
+
+    padding: 120px 6%;
+
+    background: #fffdf8;
+
+    overflow: hidden;
+}
+
+.contact-heading {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+}
+
+.contact-heading > p {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.contact-heading h2 {
+    font-size: clamp(70px, 10vw, 130px);
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+
+    margin: 0;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 3;
+
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+
+    gap: 80px;
+
+    align-items: end;
+
+    margin-top: 70px;
+}
+
+.contact-message {
+    max-width: 600px;
+}
+
+.contact-message > p {
+    font-size: 20px;
+    line-height: 1.5;
+
+    color: #555;
+
+    margin-bottom: 25px;
+}
+
+.contact-message > a {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    max-width: 450px;
+}
+
+.social-link {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 25px;
+
+    border: 1px solid #171717;
+
+    box-shadow: 7px 7px 0 #171717;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    transition: transform 0.3s ease;
+}
+
+.linkedin {
+    background: #f3a8bd;
+    transform: rotate(-1deg);
+}
+
+.github {
+    background: #f3d58a;
+    transform: rotate(1.5deg);
+}
+
+.instagram {
+    background: #a9d8e8;
+    transform: rotate(-1deg);
+}
+
+.social-link:hover {
+    transform: translateX(-8px) rotate(0deg);
+}
+
+.contact-strawberry {
+    position: absolute;
+
+    width: 200px;
+    height: auto;
+
+    top: 150px;
+    right: 4%;
+
+    transform: rotate(5deg);
+
+    z-index: 1;
+}
+
+.contact-cats {
+    position: absolute;
+
+    width: 300px;
+    height: auto;
+
+    bottom: 200px;
+    left: 15%;
+
+    transform: rotate(-4deg);
+
+    z-index: 0;
+}
+
+/* ================================
+   MOBILE RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 768px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    nav h1 {
+        font-size: 21px;
+    }
+
+    nav ul {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+        gap: 18px;
+    }
+
+    nav ul a {
+        font-size: 13px;
+    }
+
+    nav > a {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: auto;
+
+        padding: 80px 6% 100px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 60px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero h2 {
+        font-size: clamp(48px, 15vw, 72px);
+
+        line-height: 0.95;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .hero-buttons a {
+        padding: 11px 18px;
+    }
+
+
+    /* ---------- HERO POLAROID ---------- */
+
+    .hero-image {
+        width: 100%;
+        min-width: 0;
+
+        height: 480px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .polaroid {
+        width: 280px;
+        padding: 12px 12px 22px;
+    }
+
+    .polaroid img {
+        height: 330px;
+    }
+
+    .polaroid p {
+        font-size: 17px;
+    }
+
+
+    /* ---------- HERO DECORATIONS ---------- */
+
+    .scrap-pink {
+        width: 130px;
+        height: 80px;
+
+        top: 30px;
+        left: -40px;
+    }
+
+    .doodle-star {
+        left: 5px;
+        top: 160px;
+
+        font-size: 40px;
+    }
+
+    .doodle-heart {
+        right: 5%;
+        top: 300px;
+
+        font-size: 38px;
+    }
+
+    .hand-note {
+        display: none;
+    }
+
+    .doodle-spark {
+        left: auto;
+        right: 15%;
+        top: 100px;
+
+        font-size: 30px;
+    }
+
+
+    /* ---------- WORK ---------- */
+
+    .work {
+        padding: 90px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(42px, 13vw, 64px);
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .project-card > img {
+        height: 250px;
+    }
+
+    .project-info {
+        padding: 22px 8px 12px;
+    }
+
+    .project-info h3 {
+        font-size: 27px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about {
+        padding: 90px 6%;
+    }
+
+    .about-heading {
+        margin-bottom: 50px;
+    }
+
+    .about-heading h2 {
+        font-size: clamp(44px, 13vw, 65px);
+    }
+
+    /*
+       Keep About and Skills in one column
+       on mobile.
+    */
+
+    .about-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+    .about-text {
+        width: 100%;
+        padding: 30px;
+
+        transform: rotate(-1deg);
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .skills {
+        width: 100%;
+        padding: 30px;
+
+        transform: rotate(1.5deg);
+    }
+
+    .skills-list {
+        gap: 9px;
+    }
+
+    .skills-list span {
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+
+
+    /* ---------- ABOUT DECORATIONS ---------- */
+
+    .about-cats {
+        width: 130px;
+
+        top: -80px;
+        left: -15px;
+
+        transform: rotate(-5deg);
+    }
+
+    .skills-bow {
+        width: 95px;
+
+        top: -55px;
+        right: -25px;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact {
+        min-height: auto;
+
+        padding: 90px 6% 120px;
+    }
+
+    .contact-heading h2 {
+        font-size: clamp(58px, 16vw, 85px);
+
+        letter-spacing: -3px;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        margin-top: 55px;
+    }
+
+    .contact-message {
+        max-width: 100%;
+    }
+
+    .contact-message > p {
+        font-size: 17px;
+    }
+
+    .contact-message > a {
+        font-size: 16px;
+    }
+
+    .social-links {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .social-link {
+        padding: 16px 20px;
+        font-size: 17px;
+    }
+
+
+    /* ---------- CONTACT DECORATIONS ---------- */
+
+    .contact-strawberry {
+        width: 150px;
+
+        top: 15px;
+        right: -30px;
+
+        transform: rotate(8deg);
+    }
+
+    .contact-cats {
+        width: 190px;
+
+        bottom: 15px;
+        left: -30px;
+
+        transform: rotate(-5deg);
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        padding: 35px 6%;
+    }
+
+    footer h3 {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
+
+/* =================================
+   MOBILE SCRAPBOOK FIXES
+   ================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- HERO ---------- */
+
+    .hero-image {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        height: 500px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .polaroid {
+        width: 275px;
+        padding: 12px 12px 22px;
+
+        transform: rotate(3deg);
+
+        z-index: 3;
+    }
+
+    .polaroid img {
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+    }
+
+
+    /* ---------- FLOWER ---------- */
+
+    .flower {
+        width: 150px;
+        height: auto;
+
+        bottom: -60px;
+        left: -15px;
+
+        transform: rotate(-12deg);
+
+        z-index: 4;
+    }
+
+
+    /* ---------- GINGHAM PAPER ---------- */
+
+    .gingham {
+        width: 500px;
+        height: 380px;
+
+        top: 65px;
+        left: calc(30% - 95px);
+
+        transform: rotate(-7deg);
+
+        z-index: 1;
+    }
+
+
+    /* ---------- SUN ---------- */
+
+    /*
+       Hiding the sun on mobile for now.
+       It was visually fighting with the Polaroid.
+    */
+
+    .sun {
+        display: none;
+    }
+
+
+    /* ---------- TAPE ---------- */
+
+    .polaroid::before {
+        width: 80px;
+        height: 26px;
+
+        top: -14px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about {
+        padding: 80px 6% 100px;
+    }
+
+    .about-heading {
+        margin-bottom: 55px;
+    }
+
+    .about-heading h2 {
+        font-size: 48px;
+        line-height: 0.95;
+    }
+
+
+    /* ---------- ABOUT CARDS ---------- */
+
+    .about-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+
+    .about-text {
+        width: 100%;
+        padding: 30px;
+
+        transform: rotate(-1deg);
+    }
+
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- CATS ---------- */
+
+    .about-cats {
+        width: 115px;
+
+        top: -105px;
+        left: auto;
+        right: -10px;
+
+        transform: rotate(-5deg);
+
+        z-index: 10;
+    }
+
+
+    /* ---------- SKILLS ---------- */
+
+    .skills {
+        width: 100%;
+        padding: 30px;
+
+        transform: rotate(1.5deg);
+    }
+
+    .skills-bow {
+        width: 90px;
+
+        top: -55px;
+        right: -20px;
+
+        z-index: 5;
+    }
+
+}
