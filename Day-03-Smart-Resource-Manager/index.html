@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Resource Manager</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav>
+
+            <h1>SRM<span>.</span></h1>
+
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+            </ul>
+
+            <a href="#resources" class="nav-button">
+                View Resources ↗
+            </a>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section id="dashboard" class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    RESOURCE INTELLIGENCE ✦
+                </p>
+
+                <h2>
+                    Know what you have.
+                    <span>Act before it runs out.</span>
+                </h2>
+
+                <p class="hero-description">
+                    Monitor resources, track utilization, and identify
+                    potential shortages before they become problems.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#resources">
+                        Explore Resources ↗
+                    </a>
+
+                    <a href="#alerts">
+                        View Alerts
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO DASHBOARD PREVIEW -->
+            <div class="hero-visual">
+
+                <div class="dashboard-preview">
+
+                    <div class="preview-header">
+                        <span>SYSTEM HEALTH</span>
+                        <strong>84%</strong>
+                    </div>
+
+                    <div class="preview-line">
+
+                        <span>CPU</span>
+
+                        <div>
+                            <i style="width: 82%;"></i>
+                        </div>
+
+                        <strong>82%</strong>
+
+                    </div>
+
+
+                    <div class="preview-line">
+
+                        <span>STORAGE</span>
+
+                        <div>
+                            <i style="width: 64%;"></i>
+                        </div>
+
+                        <strong>64%</strong>
+
+                    </div>
+
+
+                    <div class="preview-line">
+
+                        <span>LICENSES</span>
+
+                        <div>
+                            <i style="width: 91%;"></i>
+                        </div>
+
+                        <strong>91%</strong>
+
+                    </div>
+
+
+                    <div class="preview-footer">
+
+                        <span>12 alerts detected</span>
+
+                        <span>↗</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+        
+<section class="overview" id="overview">
+    <div class="section-heading">
+        <p>LIVE OVERVIEW / 001</p>
+        <h2>Resource overview<span>.</span></h2>
+    </div>
+
+    <div class="overview-grid">
+        <article class="stat-card">
+            <p>TOTAL UNITS</p>
+            <h3 id="total-resources">0</h3>
+            <span>Across all categories ↗</span>
+        </article>
+
+        <article class="stat-card">
+            <p>AVAILABLE UNITS</p>
+            <h3 id="available-resources">0</h3>
+            <span>Ready for allocation ↗</span>
+        </article>
+
+        <article class="stat-card alert-card">
+            <p>RESOURCES NEEDING ATTENTION</p>
+            <h3 id="low-resources">0</h3>
+            <span>Low stock or warning ↗</span>
+        </article>
+    </div>
+</section>
+
+
+        <!-- UTILIZATION -->
+        <section class="utilization" id="utilization">
+
+        <div class="section heading">
+            <p>RESOURCES ANALYTICS / 002</p>
+            <H2>Utilization<span>.</span></H2>
+        </div>
+
+        <div id="utilization-list" class="utilization-list">
+
+        </div>
+        </section>
+
+
+        <!-- RESOURCES -->
+        <section id="resources" class="resources">
+
+    <div class="section-heading">
+        <p>RESOURCE INVENTORY / 003</p>
+        <h2>What we have<span>.</span></h2>
+    </div>
+
+    <div class="resource-controls">
+
+    <input
+        type="text"
+        id="resource-search"
+        placeholder="Search resources..."
+    >
+
+    <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="Hardware">Hardware</option>
+        <option value="Software">Software</option>
+        <option value="Cloud">Cloud</option>
+        <option value="Infrastructure">Infrastructure</option>
+    </select>
+
+    <select id="status-filter">
+        <option value="all">All Status</option>
+        <option value="Available">Available</option>
+        <option value="Low">Low</option>
+        <option value="Warning">Warning</option>
+    </select>
+
+</div>
+
+    <div class="resource-table-wrapper">
+
+        <table class="resource-table">
+
+            <thead>
+                <tr>
+                    <th>RESOURCE</th>
+                    <th>CATEGORY</th>
+                    <th>AVAILABLE</th>
+                    <th>UTILIZATION</th>
+                    <th>STATUS</th>
+                    <th>ASSIGNED TO</th>
+                </tr>
+            </thead>
+
+            <tbody id="resource-table-body">
+                <!-- JavaScript will generate rows -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+        <section id="alerts" class="alerts">
+
+    <div class="section-heading">
+        <p>ATTENTION REQUIRED / 004</p>
+        <h2>Watch the system<span>.</span></h2>
+    </div>
+
+    <div id="alerts-list" class="alerts-list">
+        <!-- JavaScript will generate alerts -->
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+    <p>
+        <strong>SRM.</strong>
+        Smart Resource Manager
+    </p>
+
+    <p>
+        Built with HTML · CSS · JavaScript
+    </p>
+
+</footer>
+    <script src="./js/data.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
