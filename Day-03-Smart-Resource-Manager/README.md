@@ -17,11 +17,11 @@ HTML · CSS · JavaScript
 
 ## Screenshots
 
-### Desktop
-![Desktop](screenshots/image1.png)
+### 
+![1](./screenshots/image1.png)
 
-### Mobile
-![Mobile](screenshots/image2.png)
+### 
+![2](./screenshots/image2.png)
 
 ## Live Demo
 
