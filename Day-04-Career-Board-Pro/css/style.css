@@ -1,0 +1,77 @@
+body {
+    background: #f8f9fa;
+    color: #171717;
+}
+
+.hero-section {
+    padding: 90px 0 70px;
+}
+
+.hero-section h1 {
+    letter-spacing: -1.5px;
+}
+
+.search-box {
+    background: white;
+    padding: 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.jobs-section {
+    padding: 50px 0 80px;
+}
+
+.job-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.job-card .card-body {
+    padding: 28px;
+}
+
+.job-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.job-card p {
+    line-height: 1.5;
+}
+
+
+/* Skill badges */
+
+.job-card .badge {
+    font-weight: 500;
+    padding: 7px 11px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .jobs-section {
+        padding: 50px 0;
+    }
+
+    .job-card .card-body {
+        padding: 22px;
+    }
+
+}
+
