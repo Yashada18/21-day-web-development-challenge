@@ -2,6 +2,10 @@
 
 A responsive expense tracking web app built using HTML, CSS, and JavaScript.
 
+## Live Demo
+
+[View Expense Tracker Live](https://expensetracker-rouge-ten.vercel.app/)
+
 ## Features
 
 - Add expenses
@@ -12,6 +16,20 @@ A responsive expense tracking web app built using HTML, CSS, and JavaScript.
 - LocalStorage persistence
 - Dynamic spending graph
 - Responsive design
+
+## Screenshots
+
+### Dashboard
+
+![Expense Tracker Dashboard](./screenshots/dashboard.png)
+
+### Expense Tracking
+
+![Expense Tracker Expenses](./screenshots/expenses.png)
+
+### Mobile View
+
+![Expense Tracker Mobile View](./screenshots/mobile.png)
 
 ## Tech Stack
 
