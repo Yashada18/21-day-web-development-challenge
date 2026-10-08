@@ -20,8 +20,10 @@ A responsive expense tracking web app built using HTML, CSS, and JavaScript.
 ## Screenshots
 ### Dashboard
 <img src="./screenshots/dashboard.png" width="500">
+
 ### Expense Tracking
 <img src="./screenshots/expenses.png" width="500">
+
 ### Mobile View
 <img src="./screenshots/mobile.png" width="300">
 
