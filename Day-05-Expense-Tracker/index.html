@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+    <div class="header-content">
+        <p class="greeting">Good evening, Yashada</p>
+
+        <h1>
+            Track your money.
+            <span>Stay in control.</span>
+        </h1>
+
+        <p class="header-subtitle">
+            Keep an eye on your spending and build better habits.
+        </p>
+    </div>
+
+    <div class="header-decoration">
+        ₹
+    </div>
+
+</header>
+
+
+    <main>
+    
+        <!-- Total Spending -->
+        <section class="spending-card">
+
+            <p>Total Spent</p>
+
+            <h2 id="totalAmount">₹0</h2>
+
+            <span>↓ 12% vs last month</span>
+
+        <div class="mini-chart">
+
+    <div class="chart-label">
+        Spending trend
+    </div>
+
+    <div class="chart-bars">
+        <div class="chart-bar"></div>
+        <div class="chart-bar"></div>
+        <div class="chart-bar"></div>
+        <div class="chart-bar"></div>
+        <div class="chart-bar"></div>
+        <div class="chart-bar"></div>
+        <div class="chart-bar"></div>
+    </div>
+
+</div>    
+
+        </section>
+
+
+        <!-- Spending Health -->
+        <section class="health-card">
+
+            <div class="section-header">
+                <h2>Spending Health</h2>
+                <span>Good</span>
+            </div>
+
+            <div class="health-score">
+                <strong>74</strong>
+                <small>/100</small>
+            </div>
+
+        </section>
+
+
+        <!-- Category Spending -->
+        <section class="category-card">
+
+            <div class="section-header">
+                <h2>This Month</h2>
+            </div>
+
+            <div id="categoryList">
+                <div class="category-row">
+    <span>Food</span>
+    <strong id="foodTotal">₹0</strong>
+</div>
+
+<div class="category-row">
+    <span>Travel</span>
+    <strong id="travelTotal">₹0</strong>
+</div>
+
+<div class="category-row">
+    <span>Shopping</span>
+    <strong id="shoppingTotal">₹0</strong>
+</div>
+
+<div class="category-row">
+    <span>Entertainment</span>
+    <strong id="entertainmentTotal">₹0</strong>
+</div>
+                
+            </div>
+
+        </section>
+
+
+        <!-- Recent Expenses -->
+        <section class="recent-card">
+
+            <div class="section-header">
+                <h2>Recent Expenses</h2>
+            </div>
+
+            <div id="expenseList">
+
+                <!-- JavaScript will add expenses here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- Add Expense -->
+        <section class="add-expense-card">
+
+            <h2>Add Expense</h2>
+
+            <form id="expenseForm">
+
+                <input
+                    type="text"
+                    id="expenseName"
+                    placeholder="Expense name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="expenseAmount"
+                    placeholder="Amount"
+                    required
+                >
+
+                <select id="expenseCategory">
+
+                    <option value="Food">Food</option>
+
+                    <option value="Travel">Travel</option>
+
+                    <option value="Shopping">Shopping</option>
+
+                    <option value="Entertainment">
+                        Entertainment
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    Add Expense
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

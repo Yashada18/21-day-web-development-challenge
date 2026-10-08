@@ -1,0 +1,674 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+
+    color: #171717;
+
+    background-color: #ffffff;
+
+    background-image:
+        linear-gradient(
+            rgba(35, 139, 230, 0.16) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(35, 139, 230, 0.16) 1px,
+            transparent 1px
+        );
+
+    background-size: 38px 38px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar {
+    max-width: 1200px;
+    margin: 40px auto 30px;
+    padding: 30px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #ffffff;
+    border: 2px solid #171717;
+    box-shadow: 7px 7px 0 #238be6;
+}
+
+.header-content {
+    max-width: 700px;
+}
+
+.greeting {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #238be6;
+}
+
+.topbar h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.topbar h1 span {
+    display: block;
+    color: #238be6;
+}
+
+.header-subtitle {
+    margin-top: 14px;
+    color: #666;
+    font-size: 16px;
+}
+
+.header-decoration {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #171717;
+    background: #ffd43b;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    transform: rotate(6deg);
+    box-shadow: 5px 5px 0 #171717;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: min(1200px, 90%);
+    margin: auto;
+    padding: 38px 0 60px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 18px;
+}
+/*bar charts*/
+
+.mini-chart {
+    height: 150px;
+    margin-top: 25px;
+    padding: 10px;
+    border-top: 2px dashed #171717;
+}
+
+.chart-label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.chart-bars {
+    height: 105px;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.chart-bar {
+    flex: 1;
+    background: #238be6;
+    border: 2px solid #171717;
+}
+
+.chart-bar:nth-child(1) {
+    height: 35%;
+}
+
+.chart-bar:nth-child(2) {
+    height: 55%;
+}
+
+.chart-bar:nth-child(3) {
+    height: 40%;
+}
+
+.chart-bar:nth-child(4) {
+    height: 75%;
+}
+
+.chart-bar:nth-child(5) {
+    height: 50%;
+}
+
+.chart-bar:nth-child(6) {
+    height: 85%;
+}
+
+.chart-bar:nth-child(7) {
+    height: 65%;
+}
+
+/* =========================
+   COMMON CARDS
+========================= */
+
+section {
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 2px solid #171717;
+    border-radius: 4px;
+
+    padding: 26px;
+
+    box-shadow: 5px 5px 0 #238be6;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+section:hover {
+    transform: translate(-2px, -3px);
+
+    box-shadow: 8px 8px 0 #238be6;
+}
+
+
+
+/* =========================
+   TOTAL SPENDING
+========================= */
+
+.spending-card {
+    grid-column: 1 / -1;
+
+    min-height: 280px;
+
+    background: #ffffff;
+
+    border: 2px solid #171717;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.spending-card::before {
+    content: "✦";
+
+    position: absolute;
+
+    right: 35px;
+    top: 25px;
+
+    font-size: 35px;
+
+    color: #238be6;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.spending-card::after {
+    content: "✎";
+
+    position: absolute;
+
+    right: 80px;
+    bottom: 25px;
+
+    font-size: 28px;
+
+    color: #171717;
+
+    transform: rotate(-15deg);
+
+    animation: float 4s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+
+.spending-card h2 {
+    color: var(--black);
+}
+
+.spending-card span {
+    color: var(--blue);
+}
+
+.profile-btn {
+    background: var(--blue);
+    border: 2px solid var(--black);
+}
+
+#expenseForm button {
+    background: var(--blue);
+    color: white;
+    border: 2px solid var(--black);
+}
+
+#expenseForm button:hover {
+    background: #171717;
+}
+
+/* =========================
+   MINI CHART
+========================= */
+
+.mini-chart {
+    height: 90px;
+
+    margin-top: 28px;
+
+    position: relative;
+
+    border-bottom: 1px solid #222;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(77, 177, 188, 0.25) 2px,
+            transparent 2px
+        );
+
+    background-size: 34px 100%;
+}
+
+.mini-chart::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 48%,
+            rgba(50, 150, 160, 0.4) 49%,
+            transparent 51%
+        );
+
+    opacity: 0.5;
+}
+
+
+/* =========================
+   HEALTH
+========================= */
+
+.health-card {
+    min-height: 245px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header h2 {
+    font-size: 17px;
+    font-weight: 650;
+}
+
+.section-header span {
+    padding: 6px 12px;
+
+    border-radius: 30px;
+
+    background: #edf8e8;
+    color: #438238;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.health-score {
+    text-align: center;
+
+    margin-top: 42px;
+}
+
+.health-score strong {
+    font-size: 55px;
+    font-weight: 650;
+    letter-spacing: -3px;
+}
+
+.health-score small {
+    color: #999;
+    font-size: 15px;
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category-card {
+    min-height: 245px;
+}
+
+.category-row {
+    margin-top: 20px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #f0f0ee;
+}
+
+.category-row:last-child {
+    border-bottom: none;
+}
+
+.category-row span {
+    font-size: 14px;
+    color: #4d4d4d;
+}
+
+.category-row strong {
+    float: right;
+    font-size: 14px;
+}
+
+.category-row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* =========================
+   RECENT EXPENSES
+========================= */
+
+.recent-card {
+    grid-column: 1 / -1;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 17px 4px;
+
+    border-bottom: 1px solid #eeeeec;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+.expense-info h3 {
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+.expense-info p {
+    color: #929292;
+    font-size: 12px;
+}
+
+.expense-amount {
+    font-size: 14px;
+    font-weight: 650;
+}
+
+
+/* =========================
+   ADD EXPENSE
+========================= */
+
+.add-expense-card {
+    grid-column: 1 / -1;
+
+    background: #171717;
+    color: white;
+
+    border: none;
+}
+
+.add-expense-card h2 {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+#expenseForm {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr auto;
+
+    gap: 10px;
+}
+
+#expenseForm input,
+#expenseForm select {
+    padding: 13px 14px;
+
+    border: 1px solid #dededb;
+    border-radius: 11px;
+
+    background: white;
+    color: #222;
+
+    outline: none;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+#expenseForm input:focus,
+#expenseForm select:focus {
+    border-color: #7ac4ca;
+
+    box-shadow:
+        0 0 0 3px rgba(122, 196, 202, 0.15);
+}
+
+#expenseForm button {
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: #dff3f5;
+    color: #111;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#expenseForm button:hover {
+    background: white;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    main {
+        width: 94%;
+        grid-template-columns: 1fr;
+    }
+
+    .spending-card,
+    .health-card,
+    .category-card,
+    .recent-card,
+    .add-expense-card {
+        grid-column: 1;
+    }
+
+    #expenseForm {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    .topbar h1 {
+        font-size: 19px;
+    }
+
+    main {
+        width: 94%;
+        padding-top: 22px;
+    }
+
+    section {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .spending-card {
+        min-height: 250px;
+    }
+
+    .spending-card h2 {
+        font-size: 38px;
+    }
+
+    #expenseForm {
+        grid-template-columns: 1fr;
+    }
+
+    #expenseForm button {
+        width: 100%;
+    }
+}
+
+.illustration {
+    position: absolute;
+    pointer-events: none;
+
+    animation:
+        illustrationFloat
+        4s
+        ease-in-out
+        infinite;
+}
+
+.illustration img {
+    width: 130px;
+}
+
+.illustration-one {
+    right: 40px;
+    top: 90px;
+}
+
+.illustration-two {
+    left: 20px;
+    bottom: 20px;
+
+    animation-delay: 1s;
+}
+
+@keyframes illustrationFloat {
+
+    0% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .topbar {
+        margin: 20px 15px;
+        padding: 24px;
+        align-items: flex-start;
+    }
+
+    .topbar h1 {
+        font-size: 38px;
+    }
+
+    .header-subtitle {
+        font-size: 14px;
+    }
+
+    .header-decoration {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+}
+
+.delete-btn {
+    border: 2px solid #171717;
+    background: #ffffff;
+    color: #171717;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #238be6;
+    transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 #238be6;
+}
